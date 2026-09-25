@@ -1,0 +1,136 @@
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"Poppins",Arial,sans-serif;background:#050b14;color:#edf5ff;line-height:1.6;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}.section{width:min(1180px,92%);margin:auto;padding:120px 0}.navbar{position:fixed;z-index:50;top:0;left:0;width:100%;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 4%;background:rgba(5,11,20,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(130,190,255,.08)}.brand{font-family:"Poppins";font-weight:700;letter-spacing:-.03em}.brand span{color:#48a9ff}.navbar nav{display:flex;gap:28px;align-items:center;font-size:13px;color:#aabbd0}.navbar nav a:hover{color:#fff}.nav-cta{padding:10px 18px;border:1px solid #2388e9;border-radius:30px;color:#fff!important}.menu-btn{display:none;background:none;border:0}.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding-top:150px}.eyebrow{font-size:11px;letter-spacing:.2em;color:#4caeff;font-weight:700;margin-bottom:18px}.hero h1,h2{font-family:"Poppins";line-height:.98;letter-spacing:-.05em}.hero h1{font-size:clamp(52px,8vw,105px);max-width:850px}.hero h1 span,h2 span{color:#48a9ff}.hero-text{max-width:650px;color:#91a4ba;margin:28px 0;font-size:16px}.hero-actions{display:flex;gap:12px}.btn{border:0;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;padding:14px 23px;border-radius:7px;font-weight:700;font-size:13px;transition:.25s}.btn.primary{background:#1686ea;color:#fff;box-shadow:0 10px 30px rgba(22,134,234,.2)}.btn.primary:hover{transform:translateY(-2px);background:#2697f7}.btn.ghost{border:1px solid #29405b;color:#dbeaff}.hero-meta{display:flex;gap:55px;margin-top:70px}.hero-meta div{display:flex;flex-direction:column}.hero-meta strong{font-family:"Poppins";font-size:14px}.hero-meta span,.muted{font-size:12px;color:#71859b}.hero-visual{height:600px;position:relative;display:flex;align-items:center;justify-content:center}.glow{position:absolute;width:330px;height:330px;background:#1679d9;filter:blur(120px);opacity:.2}.profile-frame{position:relative;width:min(410px,90%);height:510px;border:none;background:transparent;overflow:visible;box-shadow:none}.profile-frame img{width:100%;height:100%;object-fit:contain;border:none;background:transparent}.photo-fallback{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:transparent}.photo-fallback span{font:700 90px "Poppins";color:#48a9ff}.photo-fallback small{letter-spacing:.2em;color:#6f8ba8}.floating-card span{color:#48a9ff}.section-head{margin-bottom:55px}.section-head h2{font-size:clamp(42px,6vw,78px)}.section-head.row{display:flex;justify-content:space-between;align-items:end;gap:30px}.about{border-top:1px solid #172536}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:90px}.large-copy{font:600 clamp(27px,3.5vw,48px)/1.25 "Poppins";letter-spacing:-.03em}.about-details{color:#8498ad}.facts{margin-top:40px;border-top:1px solid #223448}.facts div{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid #223448}.facts b{color:#fff}.portfolio{border-top:1px solid #172536}.portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.project{background:#0a1421;border:1px solid #172b3e;overflow:hidden}.project img{display:block;width:100%;height:360px;object-fit:cover;background:linear-gradient(135deg,#0e2941,#07101c)}.project.tall img{height:510px}.project div{padding:20px}.project span{font-size:10px;letter-spacing:.15em;color:#4caeff}.project h3{font:600 24px "Poppins";margin-top:5px}.services{border-top:1px solid #172536}.service-list{border-top:1px solid #24384e}.service-list>div{display:grid;grid-template-columns:70px 1fr 1fr;gap:30px;padding:32px 0;border-bottom:1px solid #24384e;align-items:start}.service-list b{color:#48a9ff}.service-list h3{font:600 22px "Poppins"}.service-list p{color:#7f93aa;max-width:430px}.products{border-top:1px solid #172536}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.product{background:#0a1421;border:1px solid #1b3045;padding:28px;display:flex;flex-direction:column;min-height:310px;transition:.25s}.product:hover{border-color:#2e8fdc;transform:translateY(-5px)}.product-tag{font-size:10px;color:#4caeff;letter-spacing:.14em}.product h3{font:600 22px "Poppins";margin:25px 0 10px}.price{font:700 26px "Poppins";margin-bottom:20px}.product p{color:#8094aa;font-size:13px;flex:1}.features{list-style:none;margin:15px 0 25px;color:#b4c6d9;font-size:12px}.features li{margin:7px 0}.features li:before{content:"✓";color:#48a9ff;margin-right:8px}.product .btn{width:100%}.order{padding-bottom:150px}.order-box{display:grid;grid-template-columns:1fr 1fr;gap:70px;background:linear-gradient(120deg,#0b1d30,#08111d);border:1px solid #1b354d;padding:55px}.order-box h2{font-size:clamp(43px,5vw,70px)}.order-box>div>p:last-child{color:#8195ab;max-width:430px;margin-top:25px}.order form{display:flex;flex-direction:column;gap:15px}.order label{font-size:12px;color:#9cb0c5}.order input,.order select,.order textarea{width:100%;margin-top:7px;padding:13px 14px;background:#07111e;border:1px solid #263d53;color:#fff;border-radius:5px;outline:none}.order input:focus,.order select:focus,.order textarea:focus{border-color:#318ed8}.form-note{color:#61768c;font-size:10px}.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(1,6,12,.78);backdrop-filter:blur(12px);padding:20px}.modal.show{display:flex}.modal-card{position:relative;width:min(550px,100%);background:#0a1523;border:1px solid #29435d;padding:42px}.modal-card h2{font-size:45px}.modal-card>p:not(.eyebrow){color:#8da1b7;margin:20px 0}.modal-price{font:700 26px "Poppins";color:#48a9ff}.modal-card ul{padding-left:20px;color:#b8c8d8;margin-bottom:28px}.modal-close{position:absolute;right:18px;top:12px;background:none;border:0;color:#9db0c4;font-size:30px;cursor:pointer}footer{border-top:1px solid #172536;padding:50px 4%;display:grid;grid-template-columns:1fr auto auto;gap:50px;align-items:end;color:#7890a8}footer .brand{color:#fff}footer p{font-size:12px;margin-top:10px}.footer-links{display:flex;gap:20px;font-size:12px}.footer-links a:hover{color:#fff}.copyright{text-align:right}.loader{position:fixed;inset:0;background:#050b14;z-index:200;display:grid;place-items:center;transition:.5s}.loader.hide{opacity:0;pointer-events:none}.loader-logo{font:800 42px "Poppins"}.loader-logo span{color:#48a9ff}
+@media(max-width:800px){.navbar nav{position:absolute;top:78px;left:0;width:100%;display:none;flex-direction:column;align-items:flex-start;padding:25px 5%;background:#07101c;border-bottom:1px solid #1b3045}.navbar nav.open{display:flex}.menu-btn{display:flex;flex-direction:column;gap:5px}.menu-btn span{display:block;width:25px;height:2px;background:#fff}.hero{grid-template-columns:1fr;padding-top:125px}.hero-visual{height:470px}.profile-frame{height:420px}.about-grid,.order-box{grid-template-columns:1fr;gap:45px}.portfolio-grid,.product-grid{grid-template-columns:1fr}.project.tall img,.project img{height:380px}.service-list>div{grid-template-columns:45px 1fr}.service-list p{grid-column:2}.section-head.row{display:block}.section-head.row .muted{margin-top:15px}footer{grid-template-columns:1fr}.copyright{text-align:left}.hero-meta{gap:25px;margin-top:45px}.order-box{padding:30px 22px}}
+
+/* Professional Poppins polish */
+body{font-weight:400;letter-spacing:-.01em}
+h1,h2,h3,.brand,.btn,.price,.modal-price{font-family:"Poppins",Arial,sans-serif}
+h1,h2{font-weight:700}
+.hero h1{font-weight:700;letter-spacing:-.045em}
+.section-head h2{font-weight:700;letter-spacing:-.035em}
+.brand{font-weight:700}
+.navbar{height:82px}
+.navbar nav{font-weight:500}
+.nav-cta{font-weight:600}
+.btn{font-weight:600;letter-spacing:-.01em}
+.hero-text,.about-details,.service-list p,.product p,.order-box>div>p:last-child{line-height:1.8}
+.eyebrow{font-weight:600;letter-spacing:.16em}
+.project,.product,.order-box{border-radius:12px}
+.project{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.project:hover{transform:translateY(-5px);border-color:#112770;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.project img{transition:transform .45s ease}
+.project:hover img{transform:scale(1.025)}
+.product{border-radius:12px;box-shadow:0 10px 35px rgba(0,0,0,.08)}
+.product h3{font-weight:600}
+.price{font-weight:700}
+.btn{border-radius:8px}
+.order-box{border-radius:16px;box-shadow:0 25px 80px rgba(0,0,0,.15)}
+.order input,.order select,.order textarea{border-radius:8px}
+.modal-card{border-radius:14px;box-shadow:0 25px 100px rgba(0,0,0,.35)}
+footer .brand{font-weight:700}
+
+/* ===== Responsive professional sizing ===== */
+:root{
+  --container:1180px;
+  --blue:#1686ea;
+  --blue2:#48a9ff;
+}
+body{font-size:14px}
+.section{width:min(var(--container),92%);padding:88px 0}
+.navbar{padding:0 max(4%,calc((100vw - var(--container))/2));}
+.navbar nav{gap:24px;font-size:12px}
+.hero{min-height:760px;padding-top:110px;gap:55px}
+.hero h1{font-size:clamp(42px,5.2vw,72px);line-height:1.04}
+.hero-text{font-size:14px;max-width:570px;margin:22px 0;line-height:1.75}
+.hero-visual{height:500px}
+.profile-frame{width:min(350px,88%);height:450px}
+.hero-meta{gap:38px;margin-top:48px}
+.hero-meta strong{font-size:12px}.hero-meta span{font-size:10px}
+.section-head{margin-bottom:40px}
+.section-head h2{font-size:clamp(34px,4.5vw,58px)}
+.eyebrow{font-size:10px;margin-bottom:14px}
+.large-copy{font-size:clamp(22px,2.8vw,36px)}
+.about-grid{gap:60px}
+.about-details{font-size:13px}
+.facts div{font-size:12px}
+.project img{height:300px}.project.tall img{height:420px}
+.project h3{font-size:18px}
+.service-list>div{padding:26px 0}
+.service-list h3{font-size:19px}
+.service-list p{font-size:12px}
+.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.product{min-height:285px;padding:24px}
+.product h3{font-size:19px;margin:18px 0 7px}
+.price{font-size:21px}
+.product p,.features{font-size:11px}
+.btn{padding:11px 18px;font-size:12px}
+.order-box{padding:42px}
+.order-box h2{font-size:clamp(34px,4.5vw,56px)}
+.order input,.order select,.order textarea{font-size:12px;padding:11px 12px}
+footer{padding:42px 4%}
+
+/* Tablet */
+@media (max-width: 900px){
+  .section{padding:72px 0}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:125px}
+  .hero-visual{height:430px}
+  .profile-frame{height:390px;width:300px}
+  .about-grid{grid-template-columns:1fr;gap:35px}
+  .portfolio-grid{gap:16px}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Phone */
+@media (max-width: 600px){
+  body{font-size:13px}
+  .section{width:90%;padding:58px 0}
+  .navbar{height:70px}
+  .navbar nav{top:70px}
+  .hero{padding-top:105px;gap:25px}
+  .hero h1{font-size:clamp(34px,10vw,46px);line-height:1.08}
+  .hero-text{font-size:12px;margin:18px 0;line-height:1.7}
+  .hero-actions{gap:8px}
+  .btn{padding:10px 14px;font-size:11px}
+  .hero-meta{gap:22px;margin-top:35px}
+  .hero-meta strong{font-size:10px}.hero-meta span{font-size:9px}
+  .hero-visual{height:350px}
+  .profile-frame{height:325px;width:235px}
+  .floating-card{right:2%;bottom:25px;padding:12px 14px;font-size:8px}
+  .section-head{margin-bottom:30px}
+  .section-head h2{font-size:clamp(29px,8vw,38px)}
+  .eyebrow{font-size:8px;letter-spacing:.14em}
+  .large-copy{font-size:21px}
+  .about-details{font-size:12px}
+  .facts div{font-size:10px;padding:13px 0}
+  .portfolio-grid{grid-template-columns:1fr;gap:14px}
+  .project img,.project.tall img{height:260px}
+  .project div{padding:14px}
+  .project h3{font-size:16px}
+  .project span{font-size:8px}
+  .service-list>div{grid-template-columns:32px 1fr;gap:12px;padding:20px 0}
+  .service-list h3{font-size:16px}
+  .service-list p{grid-column:2;font-size:11px}
+  .product-grid{grid-template-columns:1fr;gap:12px}
+  .product{min-height:0;padding:20px}
+  .product h3{font-size:17px;margin:13px 0 5px}
+  .price{font-size:19px}
+  .product p,.features{font-size:10px}
+  .order{padding-bottom:80px}
+  .order-box{padding:26px 18px;gap:30px}
+  .order-box h2{font-size:32px}
+  .order-box>div>p:last-child{font-size:11px}
+  .modal-card{padding:30px 22px}
+  .modal-card h2{font-size:30px}
+  footer{padding:35px 5%;gap:25px}
+  .footer-links{font-size:10px;gap:14px}
+}
+.product .btn {
+  background: #07111e;
+  color: #48a9ff;
+  border: 1px solid #29405b;
+}
+
+.product .btn:hover {
+  background: #0d1c2c;
+  color: #ffffff;
+  border-color: #48a9ff;
+}
