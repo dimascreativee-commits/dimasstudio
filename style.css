@@ -134,3 +134,54 @@ footer{padding:42px 4%}
   color: #ffffff;
   border-color: #48a9ff;
 }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.project {
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  background: #07101c;
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project > div {
+  padding: 10px;
+}@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project img {
+    height: 220px;
+  }
+}/* ===== Portfolio semua ukuran sama ===== */
+
+.project.tall {
+  grid-row: auto;
+}
+
+.project.tall img {
+  height: 150px;
+}/* PORTFOLIO - 2 KOLOM SEMUA UKURAN */
+.portfolio-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.project.tall {
+  grid-row: auto !important;
+}
+
+.project img,
+.project.tall img {
+  height: 150px !important;
+}
