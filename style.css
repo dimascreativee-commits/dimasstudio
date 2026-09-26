@@ -248,4 +248,68 @@ footer{padding:42px 4%}
   .project h3 {
     font-size: 14px;
   }
+}/* =================================
+   PORTFOLIO - FINAL OVERRIDE
+   ================================= */
+
+.portfolio-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.project {
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.project.tall {
+  grid-row: auto !important;
+}
+
+.project img,
+.project.tall img {
+  display: block !important;
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover !important;
+}
+
+.project > div {
+  padding: 20px !important;
+}
+
+/* Tablet / layar yang dianggap <= 800px */
+@media (max-width: 800px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .project img,
+  .project.tall img {
+    height: 260px !important;
+  }
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .project img,
+  .project.tall img {
+    height: 180px !important;
+  }
+
+  .project > div {
+    padding: 12px !important;
+  }
+
+  .project h3 {
+    font-size: 14px !important;
+  }
 }
