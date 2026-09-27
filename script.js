@@ -189,6 +189,7 @@ document.addEventListener("keydown", function (e) {
      e.key === "-" ||
      e.key === "=" ||
      e.key === "0")
-  ) {
-    e.preventDefault();
-  }
+  ) // Loader
+window.addEventListener("load", () => {
+  setTimeout(() => document.getElementById("loader").classList.add("hide"), 450);
+});/* =================================
