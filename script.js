@@ -128,7 +128,6 @@ if (orderForm) {
     const name = document.getElementById("name").value.trim();
     const productId = document.getElementById("product").value;
     const deadline = document.getElementById("deadline").value.trim();
-    const reference = document.getElementById("reference").value.trim();
     const brief = document.getElementById("brief").value.trim();
 
     const product = products.find(p => p.id === productId);
@@ -136,7 +135,7 @@ if (orderForm) {
     if (!name || !product || !brief) return;
 
     const message =
-`Halo Dimas Creative 
+`Halo Dimas Creative 👋
 
 Saya ingin memesan:
 
@@ -144,7 +143,6 @@ Saya ingin memesan:
 • Produk/Jasa: ${product.name}
 • Harga mulai: ${product.price}
 • Deadline: ${deadline || "-"}
-• Referensi: ${reference || "Tidak ada"}
 
 Brief:
 ${brief}
