@@ -158,10 +158,9 @@ Mohon info selanjutnya untuk proses pemesanan. Terima kasih!`;
 // Loader
 window.addEventListener("load", () => {
   setTimeout(() => document.getElementById("loader").classList.add("hide"), 450);
-});/* =================================
- 
+});
 
-}// Disable pinch zoom
+// Disable pinch zoom
 document.addEventListener("gesturestart", function (e) {
   e.preventDefault();
 });
@@ -185,11 +184,13 @@ document.addEventListener("wheel", function (e) {
 document.addEventListener("keydown", function (e) {
   if (
     (e.ctrlKey || e.metaKey) &&
-    (e.key === "+" ||
-     e.key === "-" ||
-     e.key === "=" ||
-     e.key === "0")
-  ) // Loader
-window.addEventListener("load", () => {
-  setTimeout(() => document.getElementById("loader").classList.add("hide"), 450);
-});/* =================================
+    (
+      e.key === "+" ||
+      e.key === "-" ||
+      e.key === "=" ||
+      e.key === "0"
+    )
+  ) {
+    e.preventDefault();
+  }
+});
