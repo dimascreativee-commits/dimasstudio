@@ -966,3 +966,17 @@ h3,
   }
 
 }
+/* =================================
+   HEADLINE — CLEAN WHITE
+================================= */
+
+.hero h1,
+.section h2,
+.section h2 span,
+.order-box h2,
+.products h2,
+.payment h2,
+.portfolio-page-header h1,
+.portfolio-page-header h1 span {
+  color: #ffffff;
+}
