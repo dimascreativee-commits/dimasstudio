@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
+
+<link rel="stylesheet" href="style.css">
 <body>
   <div class="loader" id="loader"><div class="loader-logo">Dimas Creative<span></span></div></div>
 
@@ -86,12 +87,48 @@
     </div>
   </div>
 </section>
-    <section class="section portfolio" id="portfolio">
-        <article class="project"><img src="assets/sosial media.png" alt="Portfolio 1"><div><span>01 / SOCIAL MEDIA</span><h3>Social Media Design</h3></div></article>
-        <article class="project"><img src="assets/logo brand.png" alt="Portfolio 2"><div><span>02 / BRANDING</span><h3>Logo & Visual Identity</h3></div></article>
-       <article class="project"><img src="assets/video editing.png" alt="Portfolio 3"><div><span>03 / VIDEO</span><h3>Video Editing</h3></div></article>
-     <article class="project" style="align-self:start;"><img src="assets/creative design.png" alt="Portfolio 4"><div><span>04 / EVENT</span><h3>Event Creative</h3></div></article>
-    </section>
+   <section class="section portfolio" id="portfolio">
+  <div class="section-head">
+    <p class="eyebrow">02 — PORTFOLIO</p>
+    <h2>Selected <span>Works</span></h2>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <article class="project">
+      <img src="assets/sosial media.png" alt="Social Media Design">
+      <div>
+        <span>01 / SOCIAL MEDIA</span>
+        <h3>Social Media Design</h3>
+      </div>
+    </article>
+
+    <article class="project">
+      <img src="assets/logo brand.png" alt="Logo and Branding">
+      <div>
+        <span>02 / BRANDING</span>
+        <h3>Logo & Visual Identity</h3>
+      </div>
+    </article>
+
+    <article class="project">
+      <img src="assets/video editing.png" alt="Video Editing">
+      <div>
+        <span>03 / VIDEO</span>
+        <h3>Video Editing</h3>
+      </div>
+    </article>
+
+    <article class="project">
+      <img src="assets/creative design.png" alt="Event Creative">
+      <div>
+        <span>04 / EVENT</span>
+        <h3>Event Creative</h3>
+      </div>
+    </article>
+
+  </div>
+</section>
 
     <section class="section services" id="services">
       <div class="section-head"><p class="eyebrow">03 — WHAT I DO</p><h2>Jasa <span>Creative</span></h2></div>
@@ -100,7 +137,8 @@
         <div><b>02</b><h3>Branding & Logo</h3><p>Logo, identitas visual, kebutuhan event, dan aset branding digital.</p></div>
         <div><b>03</b><h3>Video Editing</h3><p>Reels, vlog, video promosi, PKKMB, tugas sekolah, dan video organisasi.</p></div>
         <div><b>04</b><h3>Event Creative</h3><p>Kebutuhan visual untuk event seperti poster, photobooth, banner, dan materi publikasi.</p></div>
-    </section>
+     </div>
+</section>
 
     <section class="section products" id="products">
       <div class="section-head row"><div><p class="eyebrow">04 — PRODUCTS & PRICING</p><h2>Pilih <span>project</span></h2></div><p class="muted">Harga awal — bisa menyesuaikan tingkat kesulitan dan kebutuhan.</p></div>
@@ -119,12 +157,12 @@
         </form>
       </div>
     </section>
-  </main>
   <section class="section payment" id="payment">
   <div class="section-head">
     <p class="eyebrow">06 — PAYMENT</p>
     <h2>Simple & <span>Secure</span></h2>
   </div>
+  
 
   <div class="payment-grid">
 
@@ -168,12 +206,21 @@
 </section>
 
   <footer>
-   <a href="#home" class="brand">Dimas Creative</a>
-    <p>Make your visual more creative</p></div>
-    <div class="footer-links"><a href="https://www.instagram.com/dimascreative.id?stkn=MW5lM3FwZWRha3N2Zw==" target="_blank">Instagram</a><a href="https://www.tiktok.com/@dimas.design?_r=1&_t=ZS-9A1ilNzR3TS" target="_blank">TikTok</a><a href="https://www.behance.net/gallery/254617711/PORTOFOLIO-2026" target="_blank">Behance</a></div>
-    <p class="copyright">© 2026 Dimas Creative. All rights reserved.</p>
-  </footer>
+  <div>
+    <a href="#home" class="brand">Dimas Creative</a>
+    <p>Make your visual more creative.</p>
+  </div>
 
+  <div class="footer-links">
+    <a href="https://www.instagram.com/dimascreative.id" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@dimas.design" target="_blank">TikTok</a>
+    <a href="https://www.behance.net/gallery/254617711/PORTFOLIO-2026" target="_blank">Behance</a>
+  </div>
+
+  <p class="copyright">
+    © 2026 Dimas Creative. All rights reserved.
+  </p>
+</footer>
   <div class="modal" id="modal" aria-hidden="true">
     <div class="modal-card">
       <button class="modal-close" id="modalClose">×</button>
