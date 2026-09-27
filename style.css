@@ -1080,4 +1080,28 @@ h3,
   to {
     transform: translateX(-50%);
   }
+}/* =========================================
+   PREVENT MOBILE HORIZONTAL SCROLL
+   ========================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
