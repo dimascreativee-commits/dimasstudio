@@ -245,4 +245,35 @@ if (logoFrame) {
 
   });
 
-}
+}// Disable pinch zoom
+document.addEventListener("gesturestart", function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener("gesturechange", function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener("gestureend", function (e) {
+  e.preventDefault();
+});
+
+// Disable Ctrl + mouse wheel zoom
+document.addEventListener("wheel", function (e) {
+  if (e.ctrlKey) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// Disable Ctrl + +/- zoom
+document.addEventListener("keydown", function (e) {
+  if (
+    (e.ctrlKey || e.metaKey) &&
+    (e.key === "+" ||
+     e.key === "-" ||
+     e.key === "=" ||
+     e.key === "0")
+  ) {
+    e.preventDefault();
+  }
+});
