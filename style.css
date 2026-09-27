@@ -983,4 +983,51 @@ h3,
   color: #ffffff !important;
   background: none !important;
   -webkit-text-fill-color: #ffffff !important;
+}/* =========================================================
+   RUNNING TEXT / MARQUEE
+   ========================================================= */
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeMove 18s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-right: 60px;
+}
+
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tetap jalan di mobile */
+@media (max-width: 650px) {
+  .marquee-track {
+    animation-duration: 14s;
+  }
+}
+
+/* Jika user memilih mengurangi animasi */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
