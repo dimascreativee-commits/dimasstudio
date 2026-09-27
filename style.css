@@ -983,7 +983,67 @@ h3,
   color: #ffffff !important;
   background: none !important;
   -webkit-text-fill-color: #ffffff !important;
+}/* =========================================================
+  /* =========================================
+   RUNNING TEXT - FORCE MOVE
+   ========================================= */
+
+.running-banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 25px 0;
 }
+
+.running-shape {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--line2);
+  border-bottom: 1px solid var(--line2);
+  background: rgba(10, 20, 33, 0.65);
+  padding: 18px 0;
+}
+
+.running-track {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0;
+  animation: runningTextMove 15s linear infinite !important;
+  will-change: transform;
+}
+
+.running-item {
+  display: flex !important;
+  align-items: center;
+  flex-shrink: 0;
+  width: max-content;
+  white-space: nowrap;
+  gap: 28px;
+  padding-right: 28px;
+}
+
+.running-item span {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+.running-item b {
+  color: var(--blue);
+  font-size: 14px;
+}
+
+@keyframes runningTextMove {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 /* Tetap jalan di mobile */
 @media (max-width: 650px) {
   .marquee-track {
