@@ -483,4 +483,113 @@ h3,
   font-family: "DM Sans", Arial, sans-serif;
   font-weight: 600;
   letter-spacing: -0.035em;
+}/* ================================
+   PAYMENT
+================================ */
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.payment-card {
+  position: relative;
+  min-height: 250px;
+  padding: 30px;
+  background: #0a1421;
+  border: 1px solid rgba(26, 58, 167, 0.28);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.25s ease;
+}
+
+.payment-card:hover {
+  border-color: #1A3AA7;
+}
+
+.payment-number {
+  color: #1A3AA7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.payment-card h3 {
+  margin: 35px 0 10px;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.payment-card p {
+  max-width: 430px;
+  color: #8f9db8;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.payment-card strong {
+  color: #fff;
+}
+
+.payment-value {
+  align-self: flex-end;
+  margin-top: 20px;
+  color: #1A3AA7;
+  font-family: "DM Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.payment-note {
+  margin-top: 18px;
+  padding: 25px 30px;
+  border-top: 1px solid rgba(26, 58, 167, 0.28);
+  border-bottom: 1px solid rgba(26, 58, 167, 0.28);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.payment-note h3 {
+  margin-top: 8px;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.payment-note p {
+  max-width: 400px;
+  color: #8f9db8;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-card {
+    min-height: 220px;
+    padding: 24px;
+  }
+
+  .payment-note {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0;
+  }
+
+  .payment-value {
+    font-size: 2rem;
+  }
 }
