@@ -248,3 +248,143 @@ footer{padding:42px 4%}
   .project h3 {
     font-size: 14px;
   }
+/* =========================
+   CLEAN BLUE THEME
+   ========================= */
+
+:root {
+  --blue: #1A3AA7;
+  --blue-dark: #112770;
+  --white: #FFFFFF;
+  --text: #A8B6D8;
+  --bg: #050b14;
+  --card: #0a1421;
+}
+
+/* Headline besar putih */
+h1,
+h2,
+.section-head h2,
+.hero h1,
+.order-box h2 {
+  color: var(--white);
+}
+
+/* Semua teks kecil / subjudul biru */
+.eyebrow,
+.project span,
+.product-tag,
+.service-list b,
+.floating-card span,
+.loader-logo span {
+  color: var(--blue);
+}
+
+/* Deskripsi / body text */
+.hero-text,
+.about-details,
+.service-list p,
+.product p,
+.order-box > div > p:last-child {
+  color: var(--text);
+}
+
+/* Judul kecil tetap putih */
+h3,
+.project h3,
+.product h3,
+.service-list h3 {
+  color: var(--white);
+}
+
+/* Harga */
+.price,
+.modal-price {
+  color: var(--white);
+}
+
+/* Tombol utama — biru solid */
+.btn.primary {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.btn.primary:hover {
+  background: var(--blue-dark);
+}
+
+/* Tombol outline */
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--blue);
+  color: var(--white);
+}
+
+.btn.ghost:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+/* CTA navbar */
+.nav-cta {
+  border-color: var(--blue);
+}
+
+/* Garis / border */
+.about,
+.portfolio,
+.services,
+.products,
+footer {
+  border-color: rgba(26, 58, 167, 0.28);
+}
+
+/* Card */
+.project,
+.product {
+  background: var(--card);
+  border-color: rgba(26, 58, 167, 0.28);
+}
+
+/* Hover card */
+.project:hover,
+.product:hover {
+  border-color: var(--blue);
+}
+
+/* Form */
+.order input,
+.order select,
+.order textarea {
+  border-color: rgba(26, 58, 167, 0.4);
+}
+
+.order input:focus,
+.order select:focus,
+.order textarea:focus {
+  border-color: var(--blue);
+}
+
+/* Hilangkan gradient */
+.project img {
+  background: var(--card);
+}
+
+.order-box {
+  background: var(--card);
+}
+
+/* Loader */
+.loader {
+  background: var(--bg);
+}
+
+.loader-logo {
+  color: var(--white);
+}
+
+/* Check icon */
+.features li:before {
+  color: var(--blue);
+}
