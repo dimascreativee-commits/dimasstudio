@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#050b14">
+  <meta
+    name="description"
+    content="Dimas Creative — Portfolio Graphic Design, Branding & Video Editing."
+  >
+
+  <title>Portfolio — Dimas Creative</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <a href="index.html" class="brand">
+      Dimas Creative
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#services">Jasa</a>
+      <a href="index.html#products">Produk</a>
+      <a href="index.html#order" class="nav-cta">Pesan</a>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- PORTFOLIO HEADER -->
+    <section class="section portfolio-page">
+
+      <div class="portfolio-page-header">
+
+        <p class="eyebrow">
+          PORTFOLIO — DIMAS CREATIVE
+        </p>
+
+        <h1>
+          Selected <span>Works</span>
+        </h1>
+
+        <p>
+          Kumpulan project desain, branding, video editing,
+          dan creative work dari Dimas Creative.
+        </p>
+
+      </div>
+
+
+      <!-- FILTER -->
+      <div class="portfolio-filter">
+
+        <button class="filter-btn active" data-filter="all">
+          All
+        </button>
+
+        <button class="filter-btn" data-filter="social-media">
+          Social Media
+        </button>
+
+        <button class="filter-btn" data-filter="branding">
+          Branding
+        </button>
+
+        <button class="filter-btn" data-filter="video">
+          Video
+        </button>
+
+        <button class="filter-btn" data-filter="event">
+          Event
+        </button>
+
+      </div>
+
+
+      <!-- PORTFOLIO GRID -->
+      <div class="portfolio-gallery">
+
+
+        <!-- SOCIAL MEDIA -->
+        <article
+          class="portfolio-item"
+          id="social-media"
+          data-category="social-media"
+        >
+
+          <img
+            src="assets/sosial media.png"
+            alt="Social Media Design"
+          >
+
+          <div class="portfolio-item-content">
+
+            <span>01 / SOCIAL MEDIA</span>
+
+            <h3>
+              Social Media Design
+            </h3>
+
+          </div>
+
+        </article>
+
+
+        <!-- BRANDING -->
+        <article
+          class="portfolio-item"
+          id="branding"
+          data-category="branding"
+        >
+
+          <img
+            src="assets/logo brand.png"
+            alt="Logo and Branding"
+          >
+
+          <div class="portfolio-item-content">
+
+            <span>02 / BRANDING</span>
+
+            <h3>
+              Logo & Visual Identity
+            </h3>
+
+          </div>
+
+        </article>
+
+
+        <!-- VIDEO -->
+        <article
+          class="portfolio-item"
+          id="video"
+          data-category="video"
+        >
+
+          <img
+            src="assets/video editing.png"
+            alt="Video Editing"
+          >
+
+          <div class="portfolio-item-content">
+
+            <span>03 / VIDEO</span>
+
+            <h3>
+              Video Editing
+            </h3>
+
+          </div>
+
+        </article>
+
+
+        <!-- EVENT -->
+        <article
+          class="portfolio-item"
+          id="event"
+          data-category="event"
+        >
+
+          <img
+            src="assets/creative design.png"
+            alt="Event Creative"
+          >
+
+          <div class="portfolio-item-content">
+
+            <span>04 / EVENT</span>
+
+            <h3>
+              Event Creative
+            </h3>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div>
+
+      <a href="index.html" class="brand">
+        Dimas Creative
+      </a>
+
+      <p>
+        Make your visual more creative.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a
+        href="https://www.instagram.com/dimascreative.id"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@dimas.design"
+        target="_blank"
+        rel="noopener"
+      >
+        TikTok
+      </a>
+
+      <a
+        href="https://www.behance.net/gallery/254617711/PORTFOLIO-2026"
+        target="_blank"
+        rel="noopener"
+      >
+        Behance
+      </a>
+
+    </div>
+
+
+    <p class="copyright">
+      © 2026 Dimas Creative. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- FILTER SCRIPT -->
+  <script>
+
+    const filterButtons =
+      document.querySelectorAll(".filter-btn");
+
+    const portfolioItems =
+      document.querySelectorAll(".portfolio-item");
+
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const filter =
+          button.dataset.filter;
+
+
+        filterButtons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+
+        portfolioItems.forEach(item => {
+
+          if (
+            filter === "all" ||
+            item.dataset.category === filter
+          ) {
+
+            item.style.display = "";
+
+          } else {
+
+            item.style.display = "none";
+
+          }
+
+        });
+
+      });
+
+    });
+
+
+    // Membuka kategori sesuai link dari homepage
+    const hash =
+      window.location.hash.replace("#", "");
+
+    if (hash) {
+
+      const targetButton =
+        document.querySelector(
+          `.filter-btn[data-filter="${hash}"]`
+        );
+
+      if (targetButton) {
+        targetButton.click();
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
