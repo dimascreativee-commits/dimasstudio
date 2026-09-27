@@ -225,7 +225,7 @@ footer{padding:42px 4%}
    Tetap 2 kolom
    ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 600px){}
 
   .portfolio-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -387,4 +387,100 @@ footer {
 /* Check icon */
 .features li:before {
   color: var(--blue);
+}body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Sans", sans-serif;
+}/* ================================
+   CLEAN TYPOGRAPHY
+   Dimas Creative
+================================ */
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Main headings */
+h1,
+h2,
+h3,
+.hero h1,
+.section-head h2,
+.order-box h2 {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* Hero title */
+.hero h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+/* Section titles */
+.section-head h2,
+.order-box h2 {
+  font-weight: 600;
+  letter-spacing: -0.045em;
+}
+
+/* Card titles */
+.project h3,
+.product h3,
+.service-list h3 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Normal text */
+.hero-text,
+.large-copy,
+.about-details,
+.service-list p,
+.product p,
+.order-box > div > p:last-child {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Small labels */
+.eyebrow,
+.project span,
+.product-tag {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* Navigation */
+.navbar nav,
+.nav-cta,
+.btn {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Prices */
+.price,
+.modal-price {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Brand */
+.brand,
+.loader-logo {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
 }
