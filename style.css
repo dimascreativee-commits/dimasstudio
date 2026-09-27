@@ -592,4 +592,77 @@ h3,
   .payment-value {
     font-size: 2rem;
   }
+}/* ================================
+   SELECTED WORKS — VIEW ALL
+   ================================ */
+
+.portfolio-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #8fbfff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid rgba(72, 169, 255, 0.35);
+
+  transition:
+    color .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+.view-all:hover {
+  color: #48a9ff;
+  border-color: #48a9ff;
+  transform: translateX(4px);
+}
+
+/* Card portfolio bisa diklik */
+.project {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project h3 {
+  transition: color .25s ease;
+}
+
+.project:hover h3 {
+  color: #48a9ff;
+}
+
+/* Image hover */
+.project img {
+  transition: transform .45s ease;
+}
+
+.project:hover img {
+  transform: scale(1.025);
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .portfolio-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .view-all {
+    font-size: 11px;
+  }
 }
