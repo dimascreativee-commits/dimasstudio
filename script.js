@@ -134,14 +134,18 @@ if (orderForm) {
 
     if (!name || !product || !brief) return;
 
-    const message =
+const selectedPackageText = window.selectedPackage
+  ? `\n• Paket: ${window.selectedPackage}`
+  : "";
+
+const message =
 `Halo Dimas Creative 👋
 
 Saya ingin memesan:
 
 • Nama: ${name}
 • Produk/Jasa: ${product.name}
-• Harga mulai: ${product.price}
+• Harga mulai: ${product.price}${selectedPackageText}
 • Deadline: ${deadline || "-"}
 
 Brief:
@@ -154,7 +158,36 @@ Mohon info selanjutnya untuk proses pemesanan. Terima kasih!`;
 
     window.location.href = url;
   });
-}
+}// Paket Feed → pilih paket dan masuk ke Order
+document.querySelectorAll(".package-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const packageName = button.dataset.package;
+
+    const productSelect = document.getElementById("product");
+    const orderSection = document.getElementById("order");
+
+    if (productSelect) {
+      // Kalau ada opsi Custom Project, gunakan itu.
+      const customOption = [...productSelect.options].find(
+        option => option.textContent.toLowerCase().includes("custom")
+      );
+
+      if (customOption) {
+        productSelect.value = customOption.value;
+      }
+    }
+
+    if (orderSection) {
+      orderSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+    // Simpan paket yang dipilih untuk digunakan saat submit
+    window.selectedPackage = packageName;
+  });
+});
 // Loader
 window.addEventListener("load", () => {
   setTimeout(() => document.getElementById("loader").classList.add("hide"), 450);
