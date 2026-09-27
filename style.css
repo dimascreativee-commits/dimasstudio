@@ -833,4 +833,136 @@ h3,
     height: 130px;
   }
 
+}/* =================================
+   RESPONSIVE HERO LOGO
+================================= */
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Frame logo */
+.profile-frame {
+  position: relative;
+
+  width: clamp(220px, 30vw, 430px);
+  height: clamp(220px, 30vw, 430px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo */
+.profile-frame img {
+  width: clamp(120px, 16vw, 230px);
+  max-width: 75%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =================================
+   DESKTOP
+================================= */
+
+@media (min-width: 1200px) {
+
+  .hero-visual {
+    transform: translateX(20px);
+  }
+
+}
+
+
+/* =================================
+   LAPTOP
+================================= */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .hero-visual {
+    transform: translateX(5px);
+  }
+
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-copy {
+    align-items: center;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+    transform: none;
+  }
+
+  .profile-frame {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-frame img {
+    width: 145px;
+  }
+
+}
+
+
+/* =================================
+   HP
+================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-visual {
+    margin-top: 5px;
+  }
+
+  .profile-frame {
+    width: 230px;
+    height: 230px;
+  }
+
+  .profile-frame img {
+    width: 125px;
+  }
+
+}
+
+
+/* =================================
+   HP KECIL
+================================= */
+
+@media (max-width: 380px) {
+
+  .profile-frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-frame img {
+    width: 110px;
+  }
+
 }
