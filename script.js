@@ -119,21 +119,26 @@ document.getElementById("modalOrder").addEventListener("click", () => {
 });
 
 // Order form → WhatsApp
-document.getElementById("orderForm").addEventListener("submit", e => {
-  e.preventDefault();
+const orderForm = document.getElementById("orderForm");
 
-  const name = document.getElementById("name").value.trim();
-  const productId = document.getElementById("product").value;
-  const deadline = document.getElementById("deadline").value.trim();
-  const brief = document.getElementById("brief").value.trim();
-  const product = products.find(p => p.id === productId);
+if (orderForm) {
+  orderForm.addEventListener("submit", e => {
+    e.preventDefault();
 
-  if (!name || !product || !brief) return;
+    const name = document.getElementById("name").value.trim();
+    const productId = document.getElementById("product").value;
+    const deadline = document.getElementById("deadline").value.trim();
+    const brief = document.getElementById("brief").value.trim();
 
-  const message =
+    const product = products.find(p => p.id === productId);
+
+    if (!name || !product || !brief) return;
+
+    const message =
 `Halo Dimas Creative 👋
 
 Saya ingin memesan:
+
 • Nama: ${name}
 • Produk/Jasa: ${product.name}
 • Harga mulai: ${product.price}
@@ -144,11 +149,53 @@ ${brief}
 
 Mohon info selanjutnya untuk proses pemesanan. Terima kasih!`;
 
-  const url = `https://wa.me/6285183142397/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-});
+    const url =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
+    window.location.href = url;
+  });
+}
 // Loader
 window.addEventListener("load", () => {
   setTimeout(() => document.getElementById("loader").classList.add("hide"), 450);
 });
+const orderForm = document.getElementById("orderForm");
+
+if (orderForm) {
+  orderForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const whatsappNumber = "6285183142397";
+
+    const name = document.getElementById("name").value.trim();
+    const contact = document.getElementById("contact").value.trim();
+    const service = document.getElementById("service").value;
+    const quantity = document.getElementById("quantity").value.trim();
+    const deadline = document.getElementById("deadline").value;
+    const brief = document.getElementById("brief").value.trim();
+    const reference = document.getElementById("reference").value.trim();
+
+    const message = `Halo Dimas Creative 👋
+
+Saya ingin memesan project.
+
+Nama: ${name}
+WhatsApp: ${contact}
+Layanan: ${service}
+Jumlah / Durasi: ${quantity}
+Deadline: ${deadline}
+
+Brief:
+${brief}
+
+Referensi:
+${reference || "Tidak ada"}
+
+Saya siap melanjutkan pembahasan project. Terima kasih!`;
+
+    const whatsappURL =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.location.href = whatsappURL;
+  });
+}
