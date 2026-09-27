@@ -312,4 +312,121 @@ footer{padding:42px 4%}
   .project h3 {
     font-size: 14px !important;
   }
+}:root {
+  --blue-light: #1A3AA7;
+  --blue-dark: #112770;
+  --bg: #07112B;
+  --text: #FFFFFF;
+  --muted: #A8B6D8;
+  --stroke: rgba(26, 58, 167, 0.35);
+}
+
+/* Background */
+body {
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(26, 58, 167, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(17, 39, 112, 0.18),
+      transparent 32%
+    ),
+    var(--bg);
+
+  color: var(--text);
+}
+
+/* Font Gradient */
+.hero h1,
+.section-title {
+  background: linear-gradient(
+    110deg,
+    #1A3AA7,
+    #112770
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(
+    110deg,
+    #1A3AA7,
+    #112770
+  );
+
+  color: #FFFFFF;
+  border: 1px solid rgba(26, 58, 167, 0.5);
+}
+
+/* Card / Portfolio / Service */
+.card,
+.project,
+.service-card {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 58, 167, 0.10),
+    rgba(17, 39, 112, 0.08)
+  );
+
+  border: 1px solid rgba(26, 58, 167, 0.35);
+}
+
+/* Hover Stroke */
+.card:hover,
+.project:hover,
+.service-card:hover {
+  border-color: #1A3AA7;
+}
+
+/* Image Stroke */
+.project img {
+  border: 1px solid rgba(26, 58, 167, 0.25);
+}
+
+/* Labels */
+.label,
+.section-label,
+.project span {
+  color: #1A3AA7;
+}
+
+/* Input */
+input,
+textarea,
+select {
+  background: rgba(17, 39, 112, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(26, 58, 167, 0.35);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1A3AA7;
+  box-shadow: 0 0 0 3px rgba(26, 58, 167, 0.12);
+}
+
+/* Selection */
+::selection {
+  background: #1A3AA7;
+  color: #FFFFFF;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    #1A3AA7,
+    #112770
+  );
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1A3AA7;
 }

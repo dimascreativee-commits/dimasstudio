@@ -144,7 +144,7 @@ ${brief}
 
 Mohon info selanjutnya untuk proses pemesanan. Terima kasih!`;
 
-  const url = `https://wa.me6285183142397/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/6285183142397/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 });
 
