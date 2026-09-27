@@ -984,37 +984,63 @@ h3,
   background: none !important;
   -webkit-text-fill-color: #ffffff !important;
 }/* =========================================================
-   RUNNING TEXT / MARQUEE
-   ========================================================= */
+  /* =========================================
+   RUNNING TEXT - FORCE MOVE
+   ========================================= */
 
-.marquee {
-  overflow: hidden;
+.running-banner {
   width: 100%;
-  position: relative;
+  overflow: hidden;
+  padding: 25px 0;
 }
 
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marqueeMove 18s linear infinite;
+.running-shape {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--line2);
+  border-bottom: 1px solid var(--line2);
+  background: rgba(10, 20, 33, 0.65);
+  padding: 18px 0;
+}
+
+.running-track {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0;
+  animation: runningTextMove 15s linear infinite !important;
   will-change: transform;
 }
 
-.marquee-track span {
-  flex-shrink: 0;
-  display: inline-flex;
+.running-item {
+  display: flex !important;
   align-items: center;
+  flex-shrink: 0;
+  width: max-content;
   white-space: nowrap;
-  padding-right: 60px;
+  gap: 28px;
+  padding-right: 28px;
 }
 
-@keyframes marqueeMove {
-  from {
-    transform: translateX(0);
+.running-item span {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+.running-item b {
+  color: var(--blue);
+  font-size: 14px;
+}
+
+@keyframes runningTextMove {
+  0% {
+    transform: translate3d(0, 0, 0);
   }
 
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
