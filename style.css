@@ -1030,4 +1030,28 @@ h3,
   .marquee-track {
     animation: none;
   }
+}/* RUNNING TEXT - FIX */
+.running-track {
+  display: flex;
+  width: max-content;
+  animation: runningText 12s linear infinite;
+}
+
+.running-item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  gap: 28px;
+  padding-right: 28px;
+}
+
+@keyframes runningText {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
