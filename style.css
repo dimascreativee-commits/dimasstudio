@@ -344,8 +344,8 @@ body {
 .section-title {
   background: linear-gradient(
     110deg,
-    #1A3AA7,
-    #112770
+    #ffffff,
+    #1A3AA7
   );
 
   -webkit-background-clip: text;
