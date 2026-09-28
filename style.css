@@ -1133,7 +1133,9 @@ svg {
   -webkit-user-drag: none;
   pointer-events: none;
 }/* =================================
+ /* =================================
    PAKET FEED INSTAGRAM
+   STYLE MENYAMAKAN KARTU PRODUK
 ================================= */
 
 .packages-section {
@@ -1142,32 +1144,8 @@ svg {
   margin: 0 auto;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-number {
-  display: block;
-  font-size: 12px;
-  letter-spacing: 3px;
-  opacity: .6;
-  margin-bottom: 10px;
-}
-
-.section-heading h2 {
-  margin: 0 0 12px;
-  font-size: clamp(32px, 5vw, 54px);
-}
-
-.section-heading p {
-  max-width: 650px;
-  margin: auto;
-  opacity: .7;
-}
-
 .package-group {
-  margin-bottom: 75px;
+  margin-bottom: 70px;
 }
 
 .package-group-title {
@@ -1178,132 +1156,196 @@ svg {
 }
 
 .package-group-title > span {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
-  border-radius: 15px;
-  background: rgba(255,255,255,.08);
-  font-size: 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(30, 90, 190, 0.35);
+  font-size: 22px;
 }
 
 .package-group-title h3 {
-  margin: 0 0 4px;
+  margin: 0 0 5px;
   font-size: 24px;
 }
 
 .package-group-title p {
   margin: 0;
-  opacity: .65;
+  opacity: 0.65;
   font-size: 14px;
 }
 
 .package-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
+  align-items: stretch;
 }
+
+/* CARD */
 
 .package-card {
   position: relative;
+  min-height: 390px;
   padding: 30px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 24px;
-  background: rgba(255,255,255,.035);
-  transition: transform .25s ease, border-color .25s ease;
+  background: #0a1421;
+  border: 1px solid rgba(26, 58, 167, 0.28);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.25s ease;
+}.package-card ul {
+  flex: 1;
 }
 
 .package-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255,255,255,.3);
+  transform: translateY(-4px);
+  border-color: rgba(40, 105, 220, 0.75);
+  background: #091625;
 }
 
+/* CARD TENGAH / FEATURED */
+
 .package-card.featured {
-  border-color: rgba(255,255,255,.35);
+  border-color: rgba(35, 91, 180, 0.65);
 }
+
+/* LABEL */
 
 .package-label {
   display: inline-block;
+
   font-size: 11px;
+  font-weight: 600;
   letter-spacing: 2px;
-  opacity: .65;
-  margin-bottom: 15px;
+
+  color: #2463d4;
+
+  margin-bottom: 20px;
 }
+
+/* TITLE */
 
 .package-card h3 {
-  margin: 0 0 12px;
-  font-size: 25px;
+  margin: 0 0 10px;
+
+  font-size: 24px;
+  line-height: 1.25;
+
+  color: #ffffff;
 }
 
+/* PRICE */
+
 .package-price {
-  font-size: 28px;
-  font-weight: 700;
   margin-bottom: 25px;
+
+  font-size: 23px;
+  font-weight: 700;
+
+  color: #ffffff;
 }
 
 .package-price span {
+  margin-left: 4px;
+
   font-size: 13px;
   font-weight: 400;
-  opacity: .6;
-  margin-left: 4px;
+
+  color: rgba(255, 255, 255, 0.55);
 }
+
+/* LIST */
 
 .package-card ul {
   list-style: none;
+
   padding: 0;
-  margin: 0 0 28px;
+  margin: 0 0 25px;
+
+  flex: 1;
 }
 
 .package-card li {
   position: relative;
-  padding-left: 22px;
-  margin-bottom: 12px;
-  font-size: 14px;
+
+  padding-left: 20px;
+  margin-bottom: 11px;
+
+  font-size: 13px;
   line-height: 1.5;
-  opacity: .85;
+
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .package-card li::before {
   content: "✓";
+
   position: absolute;
   left: 0;
-  font-weight: 700;
+  top: 0;
+
+  color: #1760d8;
+
+  font-weight: 600;
 }
+
+/* BUTTON */
 
 .package-btn {
   width: 100%;
-  border: 0;
-  padding: 13px 18px;
-  border-radius: 12px;
+
+  padding: 12px 18px;
+
+  border: 1px solid #1856c4;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #ffffff;
+
   cursor: pointer;
+
   font: inherit;
+  font-size: 13px;
   font-weight: 600;
-  background: #fff;
-  color: #111;
-  transition: transform .2s ease, opacity .2s ease;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .package-btn:hover {
+  background: rgba(24, 86, 196, 0.12);
+  border-color: #2d72e8;
+
   transform: translateY(-2px);
-  opacity: .9;
 }
+
+/* JARAK ANTAR KELOMPOK */
 
 .company-packages {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-/* MOBILE */
-@media (max-width: 850px) {
-  .package-grid {
-    grid-template-columns: 1fr;
-  }
+/* =================================
+   MOBILE
+================================= */
 
+@media (max-width: 850px) {
   .packages-section {
     padding: 75px 18px;
   }
 
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
   .package-card {
-    padding: 25px;
+    min-height: auto;
+    padding: 24px;
   }
 
   .package-group-title {
