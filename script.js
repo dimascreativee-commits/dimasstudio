@@ -58,21 +58,159 @@ const products = [
 ];
 
 const productGrid = document.getElementById("productGrid");
-const productSelect = document.getElementById("product");
+const productSelect = document.getElementById("product");// Paket Feed Instagram
+const feedPackages = [
+  {
+    id: "feed-basic",
+    category: "PAKET — SEKOLAH & ORGANISASI",
+    name: "Paket Basic — Sekolah & Organisasi",
+    price: "Rp70.000",
+    description: "Paket 12 Feed Instagram untuk sekolah dan organisasi.",
+    features: [
+      "12 Feed Instagram",
+      "Free potong jadi Puzzle",
+      "Siap upload",
+      "Free revisi 2×",
+      "HD, tidak blur/buram",
+      "Desain custom, bukan template"
+    ]
+  },
+  {
+    id: "feed-standar",
+    category: "PAKET — SEKOLAH & ORGANISASI",
+    name: "Paket Standar — Sekolah & Organisasi",
+    price: "Rp90.000",
+    description: "Paket 18 Feed Instagram untuk sekolah dan organisasi.",
+    features: [
+      "18 Feed Instagram",
+      "Free potong jadi Puzzle",
+      "Siap upload",
+      "Free revisi 2×",
+      "HD, tidak blur/buram",
+      "Desain custom, bukan template"
+    ]
+  },
+  {
+    id: "feed-premium",
+    category: "PAKET — SEKOLAH & ORGANISASI",
+    name: "Paket Premium — Sekolah & Organisasi",
+    price: "Rp145.000",
+    description: "Paket 24 Grid Instagram dengan bonus tambahan.",
+    features: [
+      "24 Grid Instagram",
+      "Free potong, siap upload",
+      "Free Live Report Story / Photobooth",
+      "Free Twibbon",
+      "Free revisi 3×",
+      "HD, tidak blur/buram",
+      "Desain custom, bukan template"
+    ]
+  },
+  {
+    id: "company-starter",
+    category: "PAKET — PERUSAHAAN & BRAND",
+    name: "Paket Starter — Perusahaan & Brand",
+    price: "Rp450.000/bulan",
+    description: "Paket konten bulanan untuk perusahaan dan brand.",
+    features: [
+      "6 konten Feed Instagram",
+      "Konten bebas request",
+      "Bonus 1 template",
+      "Caption & hashtag",
+      "File desain HD"
+    ]
+  },
+  {
+    id: "company-growth",
+    category: "PAKET — PERUSAHAAN & BRAND",
+    name: "Paket Growth — Perusahaan & Brand",
+    price: "Rp890.000/bulan",
+    description: "Paket konten bulanan dengan jadwal posting rutin.",
+    features: [
+      "Durasi 1 bulan",
+      "3× posting per minggu",
+      "Total 12 Feed Instagram",
+      "Bonus 2 Instagram Story",
+      "Caption & hashtag",
+      "File desain HD"
+    ]
+  },
+  {
+    id: "company-autopilot",
+    category: "PAKET — PERUSAHAAN & BRAND",
+    name: "Paket Auto Pilot — Perusahaan & Brand",
+    price: "Rp1.500.000/bulan",
+    description: "Paket konten bulanan dengan jumlah konten lebih banyak.",
+    features: [
+      "Durasi 1 bulan",
+      "6 Feed Instagram per minggu",
+      "Total 24 Feed Instagram",
+      "Bonus 2 Instagram Story",
+      "Caption & hashtag relevan",
+      "File desain HD"
+    ]
+  }
+];
 
 function renderProducts() {
+  // Render jasa biasa ke section Products
   productGrid.innerHTML = products.map((p, i) => `
     <article class="product">
-      <span class="product-tag">${String(i + 1).padStart(2, "0")} / ${p.category}</span>
+      <span class="product-tag">
+        ${String(i + 1).padStart(2, "0")} / ${p.category}
+      </span>
+
       <h3>${p.name}</h3>
+
       <div class="price">${p.price}</div>
+
       <p>${p.description}</p>
-      <ul class="features">${p.features.map(f => `<li>${f}</li>`).join("")}</ul>
-      <button class="btn ghost detail-btn" data-id="${p.id}">Lihat Detail</button>
+
+      <ul class="features">
+        ${p.features.map(f => `<li>${f}</li>`).join("")}
+      </ul>
+
+      <button
+        class="btn ghost detail-btn"
+        data-id="${p.id}"
+      >
+        Lihat Detail
+      </button>
     </article>
   `).join("");
 
-  productSelect.innerHTML += products.map(p => `<option value="${p.id}">${p.name} — ${p.price}</option>`).join("");
+  // Render pilihan produk untuk Order
+  productSelect.innerHTML = `
+    <option value="">Pilih jasa / paket</option>
+
+    <optgroup label="Jasa">
+      ${products.map(p => `
+        <option value="${p.id}">
+          ${p.name} — ${p.price}
+        </option>
+      `).join("")}
+    </optgroup>
+
+    <optgroup label="Paket Feed — Sekolah & Organisasi">
+      ${feedPackages
+        .filter(p => p.category === "PAKET — SEKOLAH & ORGANISASI")
+        .map(p => `
+          <option value="${p.id}">
+            ${p.name} — ${p.price}
+          </option>
+        `).join("")}
+    </optgroup>
+
+    <optgroup label="Paket Feed — Perusahaan & Brand">
+      ${feedPackages
+        .filter(p => p.category === "PAKET — PERUSAHAAN & BRAND")
+        .map(p => `
+          <option value="${p.id}">
+            ${p.name} — ${p.price}
+          </option>
+        `).join("")}
+    </optgroup>
+  `;
 }
 
 renderProducts();
@@ -120,7 +258,6 @@ document.getElementById("modalOrder").addEventListener("click", () => {
 
 // Order form → WhatsApp
 const orderForm = document.getElementById("orderForm");
-
 if (orderForm) {
   orderForm.addEventListener("submit", e => {
     e.preventDefault();
@@ -128,25 +265,31 @@ if (orderForm) {
     const name = document.getElementById("name").value.trim();
     const productId = document.getElementById("product").value;
     const deadline = document.getElementById("deadline").value.trim();
+    const reference = document.getElementById("reference").value.trim();
     const brief = document.getElementById("brief").value.trim();
 
-    const product = products.find(p => p.id === productId);
+    // Gabungkan jasa biasa + paket
+    const allOrderProducts = [
+      ...products,
+      ...feedPackages
+    ];
+
+    const product = allOrderProducts.find(
+      p => p.id === productId
+    );
 
     if (!name || !product || !brief) return;
 
-const selectedPackageText = window.selectedPackage
-  ? `\n• Paket: ${window.selectedPackage}`
-  : "";
-
-const message =
+    const message =
 `Halo Dimas Creative 👋
 
 Saya ingin memesan:
 
 • Nama: ${name}
 • Produk/Jasa: ${product.name}
-• Harga mulai: ${product.price}${selectedPackageText}
+• Harga: ${product.price}
 • Deadline: ${deadline || "-"}
+• Referensi: ${reference || "-"}
 
 Brief:
 ${brief}
@@ -158,7 +301,8 @@ Mohon info selanjutnya untuk proses pemesanan. Terima kasih!`;
 
     window.location.href = url;
   });
-}// Paket Feed → pilih paket dan masuk ke Order
+}
+// Paket Feed → pilih paket dan masuk ke Order
 document.querySelectorAll(".package-btn").forEach(button => {
   button.addEventListener("click", () => {
     const packageName = button.dataset.package;
