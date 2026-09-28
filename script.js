@@ -19,7 +19,7 @@ const products = [
     id: "logo",
     category: "BRANDING",
     name: "Logo Design",
-    price: "Mulai Rp100.000",
+    price: "Mulai Rp250.000",
     description: "Logo custom yang disesuaikan dengan karakter dan kebutuhan brand.",
     features: ["Konsep custom", "PNG/JPG", "2× revisi", "File final"]
   },
